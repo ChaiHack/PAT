@@ -1,0 +1,23 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+int main()
+{
+  using namespace std;
+  unsigned int a, b , d, sum;
+  cin >> a >> b >> d;
+  vector<int> result;
+  sum = a + b;
+  if (sum == 0)result.push_back(0);
+  while (sum != 0)
+  {
+	result.push_back(sum % d);
+	sum = sum / d;
+  }
+  reverse(result.begin(), result.end());
+  for (int i = 0; i < result.size(); i++)
+  {
+	cout << result[i];
+  }
+  return 0;
+}
